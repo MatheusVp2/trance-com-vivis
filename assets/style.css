@@ -1,0 +1,104 @@
+/* ######################################## */
+/* ############## GLOBAL ################## */
+/* ######################################## */
+
+/* body, html {
+    height: 100vh;
+} */
+
+.bg {
+    /* The image used */
+    background-image: linear-gradient(purple, pink,  green);
+
+    /* Full height */
+    height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagem {
+    width: 80px;
+    height: 80px;
+}
+
+.titulo {
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: 500;
+    font-size: 30pt;
+}
+
+/* ######################################## */
+/* ############### INDEX ################## */
+/* ######################################## */
+
+#cardP1 {
+    transition: all 1s !important;
+    background-image: linear-gradient(black, purple);
+    color: white;
+    border-radius: 15px;
+}
+
+#cardP2 {
+    transition: all 1s !important;
+    background-image: linear-gradient(black, purple);
+    color: white;
+    border-radius: 15px;
+}
+
+.botaoConfigurar {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.space_index{
+    padding-top: 22%;
+}
+
+/* ######################################## */
+/* ############### AGENDA ################# */
+/* ######################################## */
+
+
+.space_agenda{
+    padding-top: 5%;
+}
+
+@media only screen and (max-width: 1700px) {
+    .space_agenda{
+        padding-top: 6%;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .space_agenda{
+        padding-top: 7%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .space_agenda{
+        padding-top: 9%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .space_agenda{
+        padding-top: 11%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .space_agenda{
+        padding-top: 13%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .space_agenda{
+        padding-top: 15%;
+    }
+}
