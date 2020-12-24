@@ -44,6 +44,7 @@
 #cardP2 {
     transition: all 1s !important;
     background-image: linear-gradient(black, purple);
+    
     color: white;
     border-radius: 15px;
 }
@@ -65,6 +66,20 @@
 
 .space_agenda{
     padding-top: 5%;
+}
+
+#input_data_buscar_agenda{
+    cursor: pointer;
+    color: white;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    padding: 2.5px;
+    padding-bottom: 8px;
+    background-image: linear-gradient(black, purple);
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13pt;
+    text-align-last: center;
 }
 
 @media only screen and (max-width: 1700px) {
