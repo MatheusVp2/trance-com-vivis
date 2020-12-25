@@ -30,4 +30,13 @@
         return $result;
     }
 
+    /* Buscar Soma Total do Mes-Ano */
+    function MODEL_SomaTotal_MES_ANO( $link, $mes_ano ){
+        $sql = "select sum(VALOR) as SOMA_TOTAL, count(VALOR) as AGENDAS from AGENDA where DATA like '$mes_ano%';";
+        $result = mysqli_query( $link, $sql);
+        if( $result ){
+            return mysqli_fetch_all($result, MYSQLI_ASSOC);
+        }
+    }
+
 ?>

@@ -1,25 +1,23 @@
 <?php
 
-    // header("Content-type: application/json; charset=utf-8");
+header("Content-type: application/json; charset=utf-8");
 
-    include("./conexao.php");
-    include('./controller.php');
-    
+include("./conexao.php");
+include('./controller.php');
 
-    $link = GetConexao();
 
-    echo $_SERVER['REQUEST_METHOD'];
+$link = GetConexao();
 
-    $nome      = $_REQUEST['nome'];
-    $telefone  = $_REQUEST['telefone'];
-    $servico   = $_REQUEST['servico'];
-    $valor     = $_REQUEST['valor'];
-    $data      = $_REQUEST['data'];
-    $hora      = $_REQUEST['hora'];
-    echo json_encode( CadastrarAgenda( $link, $nome, $telefone, $servico, $valor, $data, $hora ) ) ;
-    
-    /* Fecha a Conexão */
-    mysqli_close( $link );
-    unset( $link );
+// echo '<meta charset="UTF-8">';
 
-?>
+// echo $_SERVER['REQUEST_METHOD'];
+// echo "<br><br>";
+
+
+$ano = '2020';
+
+echo json_encode( Relatorio_MES_ANO( $link, $ano ) );
+
+/* Fecha a Conexão */
+mysqli_close($link);
+unset($link);

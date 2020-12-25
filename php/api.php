@@ -45,6 +45,11 @@
                 echo json_encode( DeletarAgenda( $link, $id_agenda ) );
             break;
 
+            case "relatorio";
+                $ano = $_REQUEST['ano'];
+                echo json_encode( Relatorio_MES_ANO( $link, $ano ) );
+            break;
+
             default;
                 $data = array(
                     "status" => false,
@@ -67,7 +72,5 @@
         echo json_encode( $data );
     }
 
-    /* Fecha Conexão */
-    unset( $link );
 
 ?>

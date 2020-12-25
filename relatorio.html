@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trance com Vivis Teste</title>
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap 5 Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+
+    <!-- Font do Titulo -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+
+<body class="bg">
+
+    <!-- ############################################################################## -->
+    <!-- ##################### MODAL DE CADASTRO DA AGENDA ############################ -->
+    <!-- ############################################################################## -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_filtro" tabindex="-1" aria-labelledby="modal_filtro" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Filtro de Busca</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-2">
+                        <div class="col-md-12">
+                            <label for="ano_filtro" class="form-label">ANO BUSCA</label>
+                            <input autocomplete="off" type="text" class="form-control" id="ano_filtro">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="btn_modal_filtro_sair"
+                        data-bs-dismiss="modal">Sair</button>
+                    <button type="button" class="btn btn-primary" id="btn_modal_filtro_buscar">Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ############################################################################## -->
+    <!-- ##################### FIM MODAL DE CADASTRO DA AGENDA ######################## -->
+    <!-- ############################################################################## -->
+
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"
+        style="background-image: linear-gradient(to right, black, black)">
+        <a class="navbar-brand titulo" href="./index.html">
+            <img class="imagem mr-3" src="./img/logo.jpg" alt="" srcset="">
+            <span style="color: green;">Trance</span>
+            <span style="color: plum;">com</span>
+            <span style="color: purple;">Vivis</span>
+        </a>
+    </nav>
+
+    <!-- ############################################################################## -->
+    <!-- ##################### TABELA DE AGENDAMENTOS ################################# -->
+    <!-- ############################################################################## -->
+    <main role="main" class="space_agenda">
+
+        <div class="container p-3 " style="text-align: right;">
+            <button type="button" class="btn btn-primary text-right" data-bs-toggle="modal"
+                data-bs-target="#modal_filtro">
+                Filtro de Busca
+            </button>
+        </div>
+
+
+        <div class="table-responsive container">
+            <table class="table table-dark table-striped ">
+                <thead>
+                    <tr>
+                        <th class="text-center" scope="col">Mes</th>
+                        <th class="text-center" scope="col">Agendamentos</th>
+                        <th class="text-center" scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="TabelaRelatorio">
+                    <!-- Tabela Automatica -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- ############################################################################## -->
+    <!-- ##################### FIM TABELA DE AGENDAMENTOS ############################# -->
+    <!-- ############################################################################## -->
+
+
+
+    <!-- ############################################################################## -->
+    <!-- ##################### JAVASCRIPTS NECESSARIOS ################################ -->
+    <!-- ############################################################################## -->
+
+    <!-- Boostrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- InputMask -->
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script src="./assets/relatorio.js"></script>
+    <!-- Meu Script -->
+    <script>
+
+        var anoBusca;
+        var relatorio;
+
+        anoBusca = GetAnoAtual()
+        AtualizaTabelaRelatorio()
+
+    </script>
+</body>
+
+</html>
