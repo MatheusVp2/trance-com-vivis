@@ -15,7 +15,7 @@ create table AGENDA(
 engine = INNODB
 default charset = utf8;
 
-
+/* 
 
 insert into AGENDA( NOME, TELEFONE, SERVICO, VALOR, DATA, HORA ) 
 	values ( 'Matheus Oliveira', '27999407698', 'Trança Completa', '60.86', '2020-08-23', '18:30' );
@@ -38,7 +38,7 @@ insert into AGENDA( NOME, TELEFONE, SERVICO, VALOR, DATA, HORA )
 insert into AGENDA( NOME, TELEFONE, SERVICO, VALOR, DATA, HORA ) 
 	values ( 'Matheus Oliveira', '27999407698', 'Trança Completa', '111.11', '2020-12-23', '15:30' );
 
-
+ */
 
 -- select sum( VALOR ) as TOTAL from AGENDA where DATA = '2020-12-23';
 
