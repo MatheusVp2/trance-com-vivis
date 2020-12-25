@@ -58,7 +58,6 @@ async function AtualizaTabelaRelatorio() {
         aux += GetBaseRelatorioVazio()
     } else {
         var soma = 0;
-        aux += document.getElementById('TabelaRelatorio').innerHTML
         relatorio.forEach(element => {
             aux += GetBaseRelatorio(element)
             soma += Number( element[3] )
