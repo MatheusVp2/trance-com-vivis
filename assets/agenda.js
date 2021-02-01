@@ -8,6 +8,8 @@ function DateFormatSql(date_sql) {
 function GetDateNowSql() {
     var now = new Date();
     [dia, mes, ano] = [now.getDate(), now.getMonth() + 1, now.getFullYear()]
+    dia = dia <= 9 ? `0${dia}` : dia
+    mes = mes <= 9 ? `0${mes}` : mes
     return `${ano}-${mes}-${dia}`
 }
 
